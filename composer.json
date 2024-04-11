@@ -1,0 +1,27 @@
+{
+    "name": "villroda/reflejos",
+    "description": "reflejos",
+    "type": "project",
+    "config": {
+        "optimize-autoloader": true
+    },
+   
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Villroda\\Reflejos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cristina",
+            "email": "cvillacrod@educacion.navarra.es"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "^5.26",
+        "grpc/grpc": "^1.57",
+        "google/cloud-firestore": "^1.41",
+        "google/protobuf": "^3.25"
+    }
+}

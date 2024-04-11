@@ -1,0 +1,405 @@
+/* Estilos para el formulario de inicio de sesión */
+body.fondo-login {
+  background: linear-gradient(
+    to bottom,
+    white,
+    #04537d
+  ); 
+}
+h2 {
+  text-align: center;
+}
+
+.contenedor-login {
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+.contenedor-descripcion {
+  width: 65%; 
+  margin: 0 auto; 
+  text-align: justify; 
+}
+
+/* Estilos para el botón de inicio de sesión */
+#login {
+  background-color: #f2f2f2; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+#loginform div {
+  margin-bottom: 15px; 
+}
+
+#loginform label {
+  display: block; 
+  margin-bottom: 5px; 
+  color: #333; 
+}
+
+#loginform input[type="email"],
+#loginform input[type="password"] {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+}
+
+
+#loginform button[type="submit"] {
+  width: 100%; 
+  background-color: #04537d; 
+  color: white; 
+  border: none; 
+  padding: 10px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+#loginform button[type="submit"]:hover {
+  background-color: #7089a2; 
+}
+
+
+#error_message {
+  color: red; 
+  margin-top: 10px; 
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.5em; 
+  }
+
+  #loginform input[type="email"],
+  #loginform input[type="password"] {
+    width: calc(
+      100% - 20px
+    ); 
+  }
+}
+
+/* Estilos específicos para la página de inicio de sesión */
+body.fondo-home {
+  background-color: #cbe2ef;
+}
+
+/* Estilo para el título */
+.contenedor-titulo {
+  text-align: center; 
+  padding: 0; 
+}
+
+.titulo{
+  font-size: 3em; 
+  font-family: "Comic Sans", cursive;
+  color: #04537d; 
+  text-align: center; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion {
+  color: #04537d;
+}
+
+/* BARRA DE NAVEGACION*/
+.barra-navegacion{
+  display: flex;
+  background-color: #2c3e50; /* Color de fondo */
+}
+
+
+.cierrsesion {
+  margin-left: 5px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+.cierrsesion a {
+  color: white; 
+  text-decoration: none; 
+  cursor: pointer; 
+}
+
+.cierrsesion a:hover {
+  color: white; 
+}
+
+.cierrsesion img {
+   width: 3%;
+   max-width: 100%;
+   min-width: 30px;
+}
+
+
+ul.opc-barra-navegacion {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #2c3e50; 
+  overflow: hidden; 
+  display: flex;  
+}
+
+ul.opc-barra-navegacion li a {
+  display: block;
+  color: white; 
+  text-align: center;
+  padding: 14px 16px; 
+  text-decoration: none;
+  transition: background-color 0.3s; 
+}
+
+ul.opc-barra-navegacion li a:hover {
+  background-color: #7089a2; 
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #34495e; 
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); 
+  z-index: 1; 
+}
+
+.submenu a {
+  color: white;
+  padding: 12px 16px; 
+  text-decoration: none;
+  display: block;
+}
+
+
+ul.opc-barra-navegacion li:hover .submenu {
+  display: block;
+}
+
+
+/*cards de home*/
+.card-container { 
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+}
+
+.card {
+  width: 240px;
+  border: 2px solid #04537d;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.user-image {
+  width: 50%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+  display: block;
+}
+
+.info {
+  color: #333;
+}
+.nombre {
+  color: #333;
+  text-align: center;
+}
+.name {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.button {
+  display: block;
+  width: 50%;
+  background-color: #04537d;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background-color: #7089a2;
+  color: #091018;
+}
+
+.button-container {
+  display: flex; 
+  justify-content: space-between; 
+  width: 50%; 
+  margin: 10px auto; 
+  align-items: center;
+}
+
+.modificarButton {
+  background-color: #04537d;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px; 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.modificarButton:hover {
+  background-color: #7089a2;
+  color: #091018;
+}
+
+.agregarButton {
+  background-color: #04537d;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px; 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.modificarButton:hover {
+  background-color: #7089a2;
+  color: #091018;
+}
+
+.borrarButton img { 
+  width: 20px; 
+  height: auto;
+}
+
+.guardar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+.guardarButton {
+  background-color: #04537d;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px; 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.guardarButton:hover {
+  background-color: #7089a2;
+  color: #091018;
+}
+
+.eliminarButton {
+  padding-left: 180px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.eliminarButton img {
+  width: 80%; 
+}
+
+.textarea {
+  width: 100%;
+}
+
+/*FORMULARIO AÑADIR DEPORTISTAS*/
+.titulo-formulario {
+  color: #04537d;
+  text-align: center;
+  font-size: 24px; 
+  margin-top: 20px; 
+}
+
+#formulario-deportista {
+  background-color: #e0dddd; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  max-width: 400px; 
+  margin: 0 auto; 
+  margin-top: 20px; 
+}
+
+#formulario-deportista label {
+  display: block;
+  margin-bottom: 5px; 
+  color: #333; 
+}
+
+#formulario-deportista input[type="text"],
+#formulario-deportista input[type="date"],
+#formulario-deportista select {
+  width: calc(100% - 10px); 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
+}
+
+/*FORMULARIO AÑADIR PROGRAMAS*/
+#formulario-programa {
+  background-color: #e0dddd; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  max-width: 400px;
+  margin: 0 auto; 
+  margin-top: 20px; 
+}
+
+#formulario-programa label {
+  display: block; 
+  margin-bottom: 5px; 
+  color: #333; 
+}
+
+#formulario-programa input[type="text"],
+#formulario-programa input[type="date"],
+#formulario-programa select {
+  width: calc(100% - 10px); 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
+}
+
+#formulario-programa textarea {
+  width: calc(100% - 10px); 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
+}

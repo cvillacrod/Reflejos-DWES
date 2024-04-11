@@ -1,0 +1,318 @@
+{
+  "__collections__": {
+    "categorias": {
+      "O48hZphJ3OU9gmoutWYk": {
+        "vueltaalabase": {
+          "base": {
+            "idbase": "vdfv",
+            "colorbase": "255,0,0"
+          },
+          "distaccion": {
+            "distraccioncolores": [
+              "255,0,0",
+              "0,255,255",
+              "255,255,0"
+            ]
+          },
+          "delay": [
+            "ninguno",
+            "random",
+            "fijo"
+          ]
+        },
+        "__collections__": {}
+      },
+      "VLpYbGTPbfXP8Kjx7M4F": {
+        "memory": {
+          "colores": [
+            "255,0,0",
+            "255,255,0",
+            "0,0,255",
+            "0,255,0"
+          ],
+          "descripcion": "",
+          "sonido": {
+            "sonidoacertar": true,
+            "sonidofallar": true,
+            "sonidofallarruta": "",
+            "sonidoacertarruta": ""
+          },
+          "delay": [
+            "ninguno",
+            "random",
+            "fijo"
+          ]
+        },
+        "__collections__": {}
+      },
+      "aVjBqd9TZhsLnEe2rWXN": {
+        "sigueelcolor": {
+          "descripcion": "-",
+          "coloresdistraccion": {
+            "delay": [
+              "ninguno",
+              "random",
+              "fijo"
+            ],
+            "numero": 2,
+            "color": [
+              "255,0,0",
+              "255,255,0"
+            ]
+          },
+          "coloresenjuego": {
+            "numero": 1,
+            "color": [
+              "0,0,255"
+            ]
+          }
+        },
+        "__collections__": {}
+      },
+      "ggXOy7717djlLF0pb04L": {
+        "random": {
+          "descripcion": "vsdvs",
+          "coloresdisponibles": {
+            "color": [
+              "0,0,255",
+              "0,255,0",
+              "255,0,0"
+            ],
+            "apagaraltocar": true,
+            "apagaraladistancia": false
+          },
+          "sonidoendispositivo": {
+            "sonidoalapagar": true,
+            "sonidoelegido": "bsfgbsgxb"
+          },
+          "delay": [
+            "ninguno",
+            "random",
+            "fijo"
+          ],
+          "jugaodres": 1
+        },
+        "__collections__": {}
+      }
+    },
+    "deportistas": {
+      "LM1o3rbYNbJTZ5xSvxg2": {
+        "fechanacimiento": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 417823200,
+            "_nanoseconds": 373000000
+          }
+        },
+        "entrenador": {
+          "__datatype__": "documentReference",
+          "value": "users/C8yVZJByK1Xg3XiA00QN"
+        },
+        "nombre": "Paula",
+        "apellido1": "Remirez",
+        "apellido2": "Ruiz",
+        "club": "A.D. San Juan",
+        "deporte": "Taekwondo",
+        "historiaclinica": [
+          {
+            "__datatype__": "documentReference",
+            "value": "historiaclinica/ZOLBkUNIKDObzJupEUH9"
+          }
+        ],
+        "resultados": [
+          {
+            "__datatype__": "documentReference",
+            "value": "resultados/2mzmijml60kM0mSOSnZ6"
+          }
+        ],
+        "__collections__": {}
+      },
+      "f5MA8QsYR0xAJbVSP0b2": {
+        "apellido2": "Lagos",
+        "deporte": "Ciclismo",
+        "fechanacimiento": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 494416800,
+            "_nanoseconds": 632000000
+          }
+        },
+        "apellido1": "Eskudero",
+        "club": "Independiente",
+        "entrenador": {
+          "__datatype__": "documentReference",
+          "value": "users/C8yVZJByK1Xg3XiA00QN"
+        },
+        "nombre": "Josu",
+        "historiaclinica": [
+          {
+            "__datatype__": "documentReference",
+            "value": "historiaclinica/ZOLBkUNIKDObzJupEUH9"
+          }
+        ],
+        "resultados": [
+          {
+            "__datatype__": "documentReference",
+            "value": "resultados/itsziJW8VzvUO0ZJEJih"
+          }
+        ],
+        "__collections__": {}
+      }
+    },
+    "historiaclinica": {
+      "IrcA0K9ApRwKpX2wo0WP": {
+        "descripcion": "Esguince tobillo",
+        "fechafin": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1704106800,
+            "_nanoseconds": 718000000
+          }
+        },
+        "fechainicio": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1704970800,
+            "_nanoseconds": 155000000
+          }
+        },
+        "iddeportista": {
+          "__datatype__": "documentReference",
+          "value": "users/itsziJW8VzvUO0ZJEJih"
+        },
+        "rehabilitacion": {
+          "ejercicios": {
+            "__datatype__": "documentReference",
+            "value": "ejercicios/ 2mzmijml60kM0mSOSnZ6 "
+          }
+        },
+        "__collections__": {}
+      },
+      "ZOLBkUNIKDObzJupEUH9": {
+        "fechainicio": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1706742000,
+            "_nanoseconds": 709000000
+          }
+        },
+        "fechafin": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1709161200,
+            "_nanoseconds": 395000000
+          }
+        },
+        "iddeportista": {
+          "__datatype__": "documentReference",
+          "value": "users/C8yVZJByK1Xg3XiA00QN"
+        },
+        "rehabilitacion": {
+          "ejercicios": {
+            "__datatype__": "documentReference",
+            "value": "resultados/itsziJW8VzvUO0ZJEJih"
+          }
+        },
+        "descripcion": "Rotura LCA",
+        "__collections__": {}
+      }
+    },
+    "programas": {
+      "7xjb07gk05QYcealFzQw": {
+        "distancia": 40,
+        "nciclos": 1,
+        "tejercicio": 60,
+        "tipo": "/categorias/vdfsvf",
+        "tdescanso": 30,
+        "descripcion": "Simon says Paula",
+        "entrenador": {
+          "__datatype__": "documentReference",
+          "value": "users/C8yVZJByK1Xg3XiA00QN"
+        },
+        "__collections__": {}
+      }
+    },
+    "resultados": {
+      "2mzmijml60kM0mSOSnZ6": {
+        "distanciaaldispositivo": "20",
+        "fecha": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1704236400,
+            "_nanoseconds": 716000000
+          }
+        },
+        "idprograma": {
+          "__datatype__": "documentReference",
+          "value": "programas/7xjb07gk05QYcealFzQw"
+        },
+        "mediatiemporeaccion": 10,
+        "numerodispositivosapagados": 10,
+        "numerofallos": 0,
+        "tiempototalejercicio": 0,
+        "tiempototalempleado": 0,
+        "iddeportista": {
+          "__datatype__": "documentReference",
+          "value": "deportistas/f5MA8QsYR0xAJbVSP0b2"
+        },
+        "tipoejercicio": {
+          "__datatype__": "documentReference",
+          "value": "categorias/VLpYbGTPbfXP8Kjx7M4F"
+        },
+        "__collections__": {}
+      },
+      "itsziJW8VzvUO0ZJEJih": {
+        "fecha": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1708254465,
+            "_nanoseconds": 207000000
+          }
+        },
+        "tiempototalejercicio": 0,
+        "mediatiemporeaccion": 0,
+        "numerodispositivosapagados": 0,
+        "tiempototalempleado": 0,
+        "numerofallos": 0,
+        "distanciaaldispositivo": 30,
+        "idprograma": {
+          "__datatype__": "documentReference",
+          "value": "programas/7xjb07gk05QYcealFzQw"
+        },
+        "tipoejercicio": {
+          "__datatype__": "documentReference",
+          "value": "categorias/O48hZphJ3OU9gmoutWYk"
+        },
+        "iddeportista": {
+          "__datatype__": "documentReference",
+          "value": "deportistas/LM1o3rbYNbJTZ5xSvxg2"
+        },
+        "__collections__": {}
+      }
+    },
+    "users": {
+      "C8yVZJByK1Xg3XiA00QN": {
+        "created_time": {
+          "__datatype__": "timestamp",
+          "value": {
+            "_seconds": 1703804400,
+            "_nanoseconds": 916000000
+          }
+        },
+        "uid": "C8yVZJByK1Xg3XiA00QN",
+        "email": "pauremirez@gmail.com",
+        "deortistas": [
+          {
+            "__datatype__": "documentReference",
+            "value": "deportistas/LM1o3rbYNbJTZ5xSvxg2"
+          },
+          {
+            "__datatype__": "documentReference",
+            "value": "deportistas/f5MA8QsYR0xAJbVSP0b2"
+          }
+        ],
+        "__collections__": {}
+      }
+    }
+  }
+}
