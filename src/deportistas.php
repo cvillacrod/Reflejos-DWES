@@ -52,64 +52,22 @@
 
                 echo '<div class="card-container">';
                 //recorre sobre cada documento en la colección 'deportistas'
-                /*foreach ($query as $document) 
-                {
-                    $deportistaData = $document->data();
-            
-                    //muestra los datos del deportista tipo card
-                    echo '<div class="card">';
-                        echo '<img src="../imagenes/usuario.png" alt="Usuario" class="user-image">';
-                        
-                        echo '<div class="nombre">';
-                            echo '<span class="name">' . $deportistaData['nombre'] . ' ' . $deportistaData['apellido1'] . ' ' . $deportistaData['apellido2'] . '</span>';
-                        echo '</div>'; //cierra el del div "nombre"
-
-                            echo '<div class="info">';
-
-                            echo '<p>Fecha de nacimiento: ' . date('d-m-Y', $deportistaData['fechanacimiento']->get()->getTimestamp()) . '</p>';
-                            
-                            echo '<p>Club: ' . $deportistaData['club'] . '</p>';
-                            echo '<p>Deporte: ' . $deportistaData['deporte'] . '</p>';
-                            
-                            //obtener el ID del entrenador y su email
-                            $entrenadorRef = $deportistaData['entrenador']->path();
-                            $entrenadorId = substr($entrenadorRef, strrpos($entrenadorRef, '/') + 1);
-                            $entrenadorDoc = $db->document($entrenadorRef)->snapshot();
-                            $entrenadorData = $entrenadorDoc->data();
-                            $entrenadorEmail = $entrenadorData['email'];
-                    
-                            echo '<p>Email del entrenador: ' . $entrenadorEmail . '</p>';        
-                                        
-                        echo '</div>'; //cierra el div "info"
-
-                    echo '<div class="button-container">';
-                   
-                         echo '<button type="submit" class="modificarButton" onclick="location.href=\'modificardeportista.php?id=' . $document->id() . '\'">Modificar</button>';
-
-                    echo '</div>'; //cierra el div "button-container"
-                    
-                    echo '<button type="button" class="eliminarButton" onclick="confirmarEliminacion(\'' . $document->id() . '\')">';
-                        echo '<img src="../imagenes/trash.png" alt="Eliminar">';
-                    echo '</button>';
-
-                    echo '</div>'; //cierra el del div "card"
-                }*/
                 foreach ($query as $document) {
                     $deportistaData = $document->data();
                 
 
-                    // Obtener el ID del entrenador y su email
+                    //obtiene el ID del entrenador y su email
                     $entrenadorRef = $deportistaData['entrenador']->path();
                     $entrenadorId = substr($entrenadorRef, strrpos($entrenadorRef, '/') + 1);
                     $entrenadorDoc = $db->document($entrenadorRef)->snapshot();
                     $entrenadorData = $entrenadorDoc->data();
                     $entrenadorEmail = $entrenadorData['email'];
-                    // Crear una instancia de Entrenador con los datos del entrenador
+                    //crea una instancia de Entrenador
                     $entrenador = new Entrenador($entrenadorId, $entrenadorEmail);
 
 
 
-                    // Crear una instancia de Deportista con los datos del documento
+                    //crea una instancia de Deportista
                     $deportista = new Deportista(
                         $deportistaData['nombre'],
                         $deportistaData['apellido1'],
@@ -117,7 +75,7 @@
                         $deportistaData['fechanacimiento']->get()->getTimestamp(),
                         $deportistaData['club'],
                         $deportistaData['deporte'],
-                        // Obtener el email del entrenador del documento del deportista
+                        //obtiene el email del entrenador del deportista
                         $entrenadorEmail=$entrenador->getEmail()
 
                     );

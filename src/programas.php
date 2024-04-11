@@ -6,6 +6,20 @@
         <title>REFLEJOS-LOGIN</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
+        <script>
+            //función para confirmar que se elimina el deportista
+            function confirmarEliminacion(id) {
+                //ventana emergente de confirmación
+                var confirmacion = confirm("¿Está seguro de borrar este programa?");
+                if (confirmacion) {
+                    //si se confirma la eliminación, redireccionar a eliminarprograma.php con el ID del deportista
+                    window.location.href = "eliminarprograma.php?id=" + id;
+                }else
+                {
+                    window.location.href ="Location: programas.php";
+                }
+            }
+        </script>
     </head>
     <body class="fondo-home">
          
@@ -36,70 +50,17 @@
 
                 echo '<div class="card-container">';
                 //recorre cada documento en la colección 'programas'
-                /*foreach ($query as $document) 
-                {
-                    $programaData = $document->data();
-
-                    //muestra los datos del programa tipo card
-                    echo '<div class="card">';
-                    echo '<img src="../imagenes/programa2.png" alt="Programa" class="user-image">';
-                    
-                
-                    //mostrar el tipo del programa
-                        $tipoId=$programaData['tipo'];
-                        //echo $tipoId;
-                        //extraer el ID de la categoría de la ruta completa
-                        $tipoId = substr($tipoId, strrpos($tipoId, '/') + 1);
-                        //echo $tipoId;
-                        //obtiene el documento de la categoría
-                        $tipoDoc = $db->document('categorias/' . $tipoId)->snapshot();
-
-                        //obtiene el nombre del primer campo del documento de la categoría
-                        $tipoNombre = array_keys($tipoDoc->data())[0];
-                        //muestra el nombre del primer campo de la categoría
-
-                        echo '<div class="nombre">';
-                                echo '<span class="name">' .  $tipoNombre . '</span>';
-                            echo '</div>';
-
-                    echo '<p>Distancia: ' . $programaData['distancia'] . '</p>';
-                    echo '<p>Número de ciclos: ' . $programaData['nciclos'] . '</p>';
-                    echo '<p>Tiempo de ejercicio (en segundos): ' . $programaData['tejercicio'] . '</p>';
-                    echo '<p>Tiempo de descanso (en segundos): ' . $programaData['tdescanso'] . '</p>';
-                    
-                    //obtiene el ID del entrenador y su email
-                    $entrenadorRef = $programaData['entrenador']->path();
-                    $entrenadorId = substr($entrenadorRef, strrpos($entrenadorRef, '/') + 1);
-                    $entrenadorDoc = $db->document($entrenadorRef)->snapshot();
-                    $entrenadorData = $entrenadorDoc->data();
-                    $entrenadorEmail = $entrenadorData['email'];
-
-                    echo '<p>Entrenador: ' . $entrenadorEmail . '</p>';
-                    echo '<textarea style="width: 96%;">'.$programaData['descripcion'].'</textarea>';
-                    
-                 
-                    echo '<div class="button-container">';
-                        echo '<button type="submit" class="agregarButton" onclick="location.href=\'modificarprograma.php?id=' . $document->id() . '\'">Modificar</button>';
-
-                    echo '</div>'; //cierra el div "button-container"
-                        
-                    echo '<button type="button" class="eliminarButton" onclick="confirmarEliminacion(\'' . $document->id() . '\')">';
-                        echo '<img src="../imagenes/trash.png" alt="Eliminar">';
-                    echo '</button>';
-                        echo '</div>'; //cierra el div "programa"
-
-                }*/
-
                 foreach ($query as $document) {
+
                     $programaData = $document->data();
                 
-                    // Obtener el ID del entrenador y su email
-                    $entrenadorRef = $programaData['entrenador']->path();
-                    $entrenadorId = substr($entrenadorRef, strrpos($entrenadorRef, '/') + 1);
-                    $entrenadorDoc = $db->document($entrenadorRef)->snapshot();
-                    $entrenadorData = $entrenadorDoc->data();
-                    $entrenadorEmail = $entrenadorData['email']; 
-                    // Crear una instancia de Entrenador con los datos del entrenador
+                    //obtiene el ID del entrenador y su email
+                        $entrenadorRef = $programaData['entrenador']->path();
+                        $entrenadorId = substr($entrenadorRef, strrpos($entrenadorRef, '/') + 1);
+                        $entrenadorDoc = $db->document($entrenadorRef)->snapshot();
+                        $entrenadorData = $entrenadorDoc->data();
+                        $entrenadorEmail = $entrenadorData['email']; 
+                    //crea una instancia de Entrenador con los datos del entrenador
                     $entrenador = new Entrenador($entrenadorId, $entrenadorEmail);
 
 
@@ -117,9 +78,8 @@
                     
                 
                 
-                    // Crear una instancia de Programa con los datos del documento
+                    //crea una instancia de Programa
                     $programa = new Programa(
-                        //$programaData['tipo'],
                         $tipoNombre,    
                         $programaData['distancia'],
                         $programaData['nciclos'],
@@ -129,7 +89,7 @@
                         $programaData['descripcion']
                     );
                 
-                    // Mostrar los detalles del programa utilizando los métodos getters de la clase Programa
+                    //muestra los detalles del programa
                     echo '<div class="card">';
                         echo '<img src="../imagenes/programa2.png" alt="Programa" class="user-image">';
                         
@@ -151,6 +111,7 @@
                         echo '<button type="button" class="eliminarButton" onclick="confirmarEliminacion(\'' . $document->id() . '\')">';
                             echo '<img src="../imagenes/trash.png" alt="Eliminar">';
                         echo '</button>';
+
                     echo '</div>'; //cierra el del div "programa"
                 }
 
